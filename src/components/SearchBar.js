@@ -2,9 +2,10 @@ import React from "react";
 
 //Class-based component
 class SearchBar extends React.Component {
-  onInputChange(event) {
-    console.log(event.target.value);
-  }
+  //Abbreviated
+  // onInputChange(event) {
+  //   console.log(event.target.value);
+  // }
 
   render() {
     return (
@@ -14,7 +15,7 @@ class SearchBar extends React.Component {
             <label> Image Search</label>
             <input
               type="text"
-              onChange={this.onInputChange}
+              onChange={(e) => console.log(e.target.value)}
               placeholder="Start typing.."
             />
           </div>
