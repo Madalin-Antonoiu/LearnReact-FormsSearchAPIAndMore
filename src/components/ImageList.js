@@ -1,3 +1,4 @@
+import "./ImageList.css";
 import React from "react";
 
 const ListDisplay = (props) => {
@@ -6,7 +7,7 @@ const ListDisplay = (props) => {
     <img alt={description} key={id} src={urls.thumb} /> //regular, small, thumb, full, raw
   ));
 
-  return <div>{images}</div>;
+  return <div className="image-list">{images}</div>;
 
   // Works just fine too:
   // return props.images.map(({ description, id, urls }) => (
