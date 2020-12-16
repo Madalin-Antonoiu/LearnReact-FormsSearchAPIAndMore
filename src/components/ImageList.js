@@ -1,14 +1,12 @@
 import React from "react";
 
 //Functional component
-const ListDisplay = () => {
-  return (
-    <ul>
-      <li>Found Picture</li>
-      <li>Found Picture</li>
-      <li>Found Picture</li>
-    </ul>
-  );
+const ListDisplay = (props) => {
+  const images = props.images.map((image) => (
+    <img alt="unsplash" src={image.urls.regular} />
+  ));
+
+  return <div>{images}</div>;
 };
 
 export default ListDisplay;
