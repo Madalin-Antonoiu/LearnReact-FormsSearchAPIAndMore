@@ -1,12 +1,17 @@
 import React from "react";
 
-//Functional component
 const ListDisplay = (props) => {
-  const images = props.images.map((image) => (
-    <img alt="unsplash" src={image.urls.regular} />
+  //console.log(props.images);
+  const images = props.images.map(({ description, id, urls }) => (
+    <img alt={description} key={id} src={urls.thumb} /> //regular, small, thumb, full, raw
   ));
 
   return <div>{images}</div>;
+
+  // Works just fine too:
+  // return props.images.map(({ description, id, urls }) => (
+  //   <img alt={description} key={id} src={urls.thumb} /> //regular, small, thumb, full, raw
+  // ));
 };
 
 export default ListDisplay;
